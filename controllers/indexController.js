@@ -6,8 +6,8 @@ exports.getSlackName = (req, res) => {
         const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const now = new Date();
         const current_day = daysOfWeek[now.getUTCDay()]
-        const utc_time = new Date(Date.now() - now.getTimezoneOffset() * 60000).toISOString();
-    
+        const utc_time = new Date().toISOString();
+        
         const jsonResponse = {
             slack_name,
             current_day,
